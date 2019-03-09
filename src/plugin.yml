@@ -1,0 +1,10 @@
+name: SpectatingSystem
+main: com.ericlam.mc.specsystem.SpectatingSystem
+version: 1.0
+commands:
+  spec:
+    description: go to specatating mode
+permissions:
+  spec.use:
+    description: use /spec command
+    default: op
