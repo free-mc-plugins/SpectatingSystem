@@ -1,6 +1,7 @@
 package com.ericlam.mc.specsystem;
 
 import org.bukkit.GameMode;
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
@@ -10,6 +11,7 @@ class Spectator {
     private ItemStack[] storgeContent;
     private ItemStack[] armorContent;
     private ItemStack offhand;
+    private Location oldLocation;
     private ItemStack[] extra;
     private Player player;
 
@@ -21,6 +23,7 @@ class Spectator {
         this.armorContent = playerInventory.getArmorContents();
         this.offhand = playerInventory.getItemInOffHand();
         this.extra = playerInventory.getExtraContents();
+        this.oldLocation = player.getLocation().clone();
         player.setGameMode(GameMode.SPECTATOR);
         player.getInventory().clear();
         player.getInventory().addItem(SpectatingSystem.getInv());
@@ -48,5 +51,9 @@ class Spectator {
 
     Player getPlayer() {
         return player;
+    }
+
+    Location getOldLocation() {
+        return oldLocation;
     }
 }

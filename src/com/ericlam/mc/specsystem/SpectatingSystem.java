@@ -2,6 +2,7 @@ package com.ericlam.mc.specsystem;
 
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -117,6 +118,7 @@ public class SpectatingSystem extends JavaPlugin implements Listener, CommandExe
 
     private void unSpec(Player player, Spectator spectator) {
         GameMode oldGM = spectator.getOldGameMode();
+        Location loc = spectator.getOldLocation();
         player.getInventory().clear();
         player.getInventory().setStorageContents(spectator.getStorgeContent());
         player.getInventory().setArmorContents(spectator.getArmorContent());
@@ -124,5 +126,6 @@ public class SpectatingSystem extends JavaPlugin implements Listener, CommandExe
         player.getInventory().setItemInOffHand(spectator.getOffhand());
         spectating.remove(spectator);
         player.setGameMode(oldGM);
+        player.teleport(loc);
     }
 }
