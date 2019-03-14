@@ -1,7 +1,7 @@
 # SpectatingSystem
 Spectate use 觀戰用插件
 
-## ![下載插件](http://festyy.com/wB55mi)
+## [下載插件](http://festyy.com/wB55mi)
 
 ## 版本: 1.12.2
 
