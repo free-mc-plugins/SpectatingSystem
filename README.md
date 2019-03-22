@@ -1,7 +1,8 @@
 # SpectatingSystem
 Spectate use 觀戰用插件
 
-## [下載插件](http://festyy.com/wB55mi)
+### 下載插件
+ [下載](http://festyy.com/wB55mi) | [Mirror](http://www.mediafire.com/file/v7rj4r3cuy2yalw/SpectatingSystem.jar/file)
 
 ## 版本: 1.12.2
 
