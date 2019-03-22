@@ -130,6 +130,7 @@ public class SpectatingSystem extends JavaPlugin implements Listener, CommandExe
 
     @EventHandler
     public void commandPreProces(PlayerCommandPreprocessEvent e) {
+        if (findSpec(e.getPlayer()) == null) return;
         String[] command = e.getMessage().split(" ");
         for (String cmd : whitelist_cmds) {
             if (command[0].equalsIgnoreCase(cmd)) return;
